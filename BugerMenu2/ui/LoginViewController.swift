@@ -12,11 +12,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailHintLabel: UILabel!
     @IBOutlet weak var passHintLabel: UILabel!
-    @IBOutlet weak var rememberLabel: UILabel!
 
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passText: UITextField!
 
+    @IBOutlet weak var rememberLabel: UILabel!
     @IBOutlet weak var rememberSwitch: UISwitch!
 
     @IBOutlet weak var loginButton: UIButton!

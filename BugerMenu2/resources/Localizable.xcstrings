@@ -2,7 +2,20 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Confirm Password" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подтвердите пароль"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Підтвердьте пароль"
+          }
+        }
+      }
     },
     "Email" : {
       "extractionState" : "manual",
@@ -19,7 +32,8 @@
             "value" : "Email"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "EmailPlaceholder" : {
       "extractionState" : "manual",
@@ -63,6 +77,46 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Авторизуватися"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ім'я"
+          }
+        }
+      }
+    },
+    "NamePlaceholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type your name here"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите свое имя"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введіть своє ім'я"
           }
         }
       }
@@ -143,6 +197,46 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зареєструватись"
+          }
+        }
+      }
+    },
+    "Surname" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фамилия"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прізвище"
+          }
+        }
+      }
+    },
+    "SurnamePlaceholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type your surname here"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите свою фамилию"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введіть своє прізвище"
           }
         }
       }

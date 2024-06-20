@@ -26,6 +26,18 @@ enum AppStrings {
     )
     static let confirmPassHint = String(localized: "Confirm Password")
 
+    static let nameHint = String(localized: "Name")
+    static let namePlaceholder = NSAttributedString(
+        string: String(localized: "NamePlaceholder"),
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.mainBlue.withAlphaComponent(0.3)]
+    )
+
+    static let surnameHint = String(localized: "Surname")
+    static let surnamePlaceholder = NSAttributedString(
+        string: String(localized: "SurnamePlaceholder"),
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.mainBlue.withAlphaComponent(0.3)]
+    )
+
     static let loginButton = String(localized: "Login")
     static let signUP = String(localized: "Sign UP")
 }
