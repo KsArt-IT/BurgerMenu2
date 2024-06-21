@@ -21,6 +21,8 @@ class Validate {
     private var nameReg = ""
     private var surnameReg = ""
 
+    private var userAgreement = false
+
     static let emailCharRegex = "^(?=.{1,253})(?=.*[A-Za-z0-9@._%+-]).*$"
     static let emailRegex = "^(?=[a-z0-9][a-z0-9@._%+-]{5,253}$)([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,63}$"
 
@@ -114,12 +116,20 @@ class Validate {
         print("surnameReg: \(self.surnameReg)")
     }
 
+    public func setUserAgreement() {
+        userAgreement = true
+    }
+
     public func isLogin() -> Bool {
         valideEmail(email) && validePassword(password) && email == emailReg && password == passwordReg
     }
 
     public func isValid() -> Bool {
         valideEmail(email) && validePassword(password)
+    }
+
+    public func isUserAgreement() -> Bool {
+        userAgreement
     }
 
     public func isValidSignup() -> Bool {

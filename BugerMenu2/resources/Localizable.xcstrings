@@ -81,6 +81,17 @@
         }
       }
     },
+    "Login Error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не все поля заполнены или пользователь не зарегистрирован!"
+          }
+        }
+      }
+    },
     "Name" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -201,6 +212,29 @@
         }
       }
     },
+    "Sign UP Error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not all fields are entered or do not meet the conditions for entering email or password complexity!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не все поля введены или не удовлетворяют условиям ввода email или сложности пароля!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не всі поля введені або не відповідають умовам введення email чи складності пароля!"
+          }
+        }
+      }
+    },
     "Surname" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -237,6 +271,46 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Введіть своє прізвище"
+          }
+        }
+      }
+    },
+    "User Agreement" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пользовательское соглашение"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Угода користувача"
+          }
+        }
+      }
+    },
+    "User Agreement Text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please read our User Agreement carefully before using the site.\nIf you do not agree with this User Agreement, you should not use the Site and its services. Please check this Agreement from time to time, as changes to the Agreement indicate that you accept them from the time such changes are made.\nYou can use the Site and all its services by complying with the terms of this Agreement and agreeing to the Privacy Policy of the site located at https://google.com.ua\n1. Use of the Site and its content\n1.1. All site materials, including text, graphics, images, forum user information, and other materials contained on this Site (hereinafter referred to as \"Materials\") are provided for personal use only.\n1.2. The materials posted on the Site are not professional advice for the purpose of providing any psychological, legal, medical or other professional services. Therefore, you should not rely on the Site Materials or use them as a substitute for consultations with qualified specialists.\n1.3. We may change, suspend or close this Site or any of its content, at any time and for any reason, without prior notice to the User. The site may become unavailable due to technical problems, malfunction of computer equipment or for other reasons. We may also impose additional fees for the use of any Site Materials at any time upon notice to users.\n1.4. The use of special software tools or programs for scanning and downloading any materials posted on the Site is prohibited. When using such software products, the user or his account may be blocked indefinitely or deleted without the possibility of recovery.\n2. Registration and Privacy\n2.1. The rules regarding the collection and use of the User's personal information are set out in the Privacy Policy, which is located at: https://google.com.ua\n2.2. To use some services of the Site, the User must register on the site and create a User profile (hereinafter - \"Profile\").\n2.3. The site is intended exclusively for persons living in Ukraine. We do not claim that the Materials presented on the Site can be applied and can be used in other countries. Those who access the site from other locations do so at their own risk and initiative and are responsible for compliance with local laws. We reserve the right to restrict access to the Site to any person, geographic area or jurisdiction at any time and in our sole discretion.\n3. Copyright\n3.1. The site and its content are the property of the \"Google\" site and are protected from unauthorized copying and distribution on the basis of the Law of Ukraine \"On Copyright and Related Rights\", the Law of Ukraine \"On the Protection of Rights to Marks for Goods and Services\", international conventions and other laws on intellectual property.\n3.2. Full or partial republication of Site Materials on other resources can be carried out if there is a direct hyperlink (open for search engines) in the first paragraph of the publication. Full or partial republication of materials, in which it is separately stated that their copying is prohibited, is not allowed.\n3.3. If you are interested in republishing, duplicating or otherwise distributing Site Materials, please contact us at office@gmail.com\n4. Sending messages to users\n4.1. The site can send various messages to the User by e-mail specified by the User during profile registration. The messages sent to the user may include the following content: information about new content, information about various promotions and discounts, advertising information of third parties, technical information about the use of the Site, information about new services.\n4.2. By creating a profile on the Site, the User automatically agrees to the fact that letters can be sent to him at his e-mail address, specified when creating a profile, the subject of which is specified in paragraph 4.1. of this agreement.\n4.3. Refuse to receive e-mails specified in para. 4.1, the User can by editing his profile on the website at the address: https://google.com.ua/users/?do=profile or by clicking on the corresponding link in any of the received e-mails.\n5. Feedback\n5.1. All proposals or questions regarding this agreement should be directed by the User to the Site's user support service at the email address office@gmail.com\nLast revision: 06/20/2024."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Прочтите наше Пользовательское соглашение внимательно прежде чем пользоваться сайтом.\nЕсли вы не согласны с настоящим Пользовательским соглашением, вы не должны пользоваться Сайтом и его сервисами. Пожалуйста, проверяйте это Соглашение время от времени, поскольку изменения в Соглашении указывают на то, что вы принимаете их с момента внесения таких изменений.\nВы можете пользоваться Сайтом и всеми его сервисами, соблюдая условия настоящего Соглашения и соглашаясь с Политикой конфиденциальности сайта, размещенной по адресу https://google.com.ua\n1. Использование Сайта и его контента\n1.1. Все материалы сайта, включая текст, графику, изображения, информацию пользователей форума, а также другие материалы, содержащиеся на этом Сайте (далее – «Материалы») предоставлены только для личного использования.\n1.2. Материалы, размещенные на Сайте, не являются профессиональными консультациями с целью предоставления каких-либо психологических, юридических, медицинских или других профессиональных услуг. Поэтому на Материалы Сайта не следует полагаться или использовать их как замену консультаций с квалифицированными специалистами.\n1.3. Мы можем изменить, приостановить или закрыть этот Сайт или любое его содержание, в любое время и по какой-либо причине, без предварительного уведомления Пользователя. Сайт может стать недоступным из-за технических проблем, неисправности компьютерного оборудования или других причин. Мы также можем в любое время после уведомления пользователей ввести дополнительную плату за использование любых Материалов Сайта.\n1.4. Запрещено использование специальных программных средств или программ для сканирования и загрузки любых материалов, размещенных на Сайте. При использовании таких программных продуктов пользователь или его аккаунт может быть заблокирован без ограничения по времени или удален без возможности восстановления.\n2. Регистрация и конфиденциальность\n2.1. Правила сбора и использования личной информации Пользователя изложены в Политике конфиденциальности, которая размещена по адресу: https://google.com.ua\n2.2. Для использования некоторых сервисов Сайта Пользователь должен зарегистрироваться на сайте и создать профиль Пользователя (далее – «Профиль»).\n2.3. Сайт направлен исключительно для лиц, проживающих на территории Украины. Мы не утверждаем, что материалы, представленные на Сайте, могут быть применены и могут использоваться в других странах. Те, кто получает доступ к сайту из других мест, делают это по собственной инициативе и на свой страх и риск и несут ответственность за соблюдение местных законов. Мы оставляем за собой право ограничить доступ к сайту любому лицу, географической территории или юрисдикции в любое время и по своему усмотрению.\n3. Авторское право\n3.1. Сайт и его содержание являются собственностью сайта Google и защищены от несанкционированного копирования и распространения на основании Закона Украины «Об авторском праве и смежных правах», Закона Украины «Об охране прав на знаки для товаров и услуг», международными конвенциями и другими законами о интеллектуальную собственность\n3.2. Полная или частичная републикация материалов Сайта на других ресурсах может быть осуществлена ​​при наличии прямой гиперссылки (открытой для поисковых систем) в первом абзаце публикации. Полная или частичная републикация материалов, в которых отдельно отмечено запрещение их копирования, не допускается.\n3.3. Если вы заинтересованы в переиздании, тиражировании или другом распространении материалов сайта, пожалуйста, свяжитесь с нами по адресу office@gmail.com\n4. Отправка сообщений пользователям\n4.1. Сайт может отправлять Пользователю различные сообщения по электронной почте, указанной Пользователем при регистрации профиля. Сообщения, отправляемые пользователю, могут включать следующее содержание: информация о новом контенте, информация о различных промо-акциях и скидках, информация рекламного характера третьих лиц, техническая информация об использовании Сайта, информация о новых сервисах.\n4.2. Создавая профиль на Сайте, Пользователь автоматически соглашается с тем, что ему могут быть отправлены письма по адресу его электронной почты, указанному при создании профиля, тематика которых указана в п.п. 4.1. этой сделки.\n4.3. Отказаться от получения электронных писем, указанных в п.п. 4.1, Пользователь может путем редактирования своего профиля на сайте по адресу: https://google.com.ua/users/?do=profile или нажав на соответствующую ссылку в любом из полученных электронных писем.\n5. Обратная связь\n5.1. Все предложения или вопросы по этому соглашению Пользователь должен направлять в службу поддержки пользователей Сайта по электронному адресу office@gmail.com\nПоследняя редакция: 20.06.2024."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Прочитайте нашу Угоду користувача уважно перш ніж користуватися сайтом.\r\nЯкщо Ви не погоджуєтесь із цією Угодою користувача, ви не повинні користуватися Сайтом і його сервісами. Будь ласка, перевіряйте цю Угоду час від часу, оскільки зміни в Угоді вказують на те, що Ви приймаєте їх з моменту внесення таких змін.\r\nВи можете користуватися Сайтом і всіма його сервісами, дотримуючись умов цієї Угоди та погоджуючись із Політикою конфіденційності сайту, що розміщена за адресою https://google.com.ua\r\n1. Використання Сайту та його контенту\r\n1.1. Усі матеріали сайту, включаючи текст, графіку, зображення, інформацію користувачів форуму, а також інші матеріали, що містяться на цьому Сайті (далі – «Матеріали») надані тільки для особистого використання.\r\n1.2. Матеріали, розміщені на Сайті, не є професійними консультаціями з метою надання будь-яких психологічних, юридичних, медичних або інших професійних послуг. Тому на Матеріали Сайту не треба покладатися або використовувати їх як заміну консультацій із кваліфікованими фахівцями.\r\n1.3. Ми можемо змінити, призупинити або закрити цей Сайт або будь-який його зміст, в будь-який час і з будь-якої причини, без попереднього повідомлення Користувача. Сайт може стати недоступним через технічні проблеми, несправність комп'ютерного обладнання або з інших причин. Ми також можемо в будь-який час після повідомлення користувачів ввести додаткову плату за використання будь-яких Матеріалів Сайту.\r\n1.4. Заборонено використання спеціальних програмних засобів або програм для сканування і завантаження будь-яких матеріалів розміщених на Сайті. При використанні таких програмних продуктів користувач або його акаунт може бути заблокований без обмеження за часом або видалений без можливості відновлення.\r\n2. Реєстрація та конфіденційність\r\n2.1. Правила щодо збирання та використання особистої інформації Користувача викладені в Політиці конфіденційності, яка розміщена за адресою: https://google.com.ua\r\n2.2. Для користування деякими сервісами Сайту Користувач повинен зареєструватися на сайті і створити профіль Користувача (далі – «Профіль»).\r\n2.3. Сайт спрямований виключно для осіб, які проживають на території України. Ми не стверджуємо, що Матеріали, представлені на Сайті, можуть бути застосовані і можуть використовуватися в інших країнах. Ті, хто отримує доступ до сайту з інших місць, роблять це з власної ініціативи та на свій страх і ризик, і несуть відповідальність за дотримання місцевих законів. Ми залишаємо за собою право обмежити доступ до сайту будь-якій особі, географічній території або юрисдикції в будь-який час і на свій власний розсуд.\r\n3. Авторське право\r\n3.1. Сайт та його зміст є власністю сайту «Google» і захищені від несанкціонованого копіювання та розповсюдження на підставі Закону України «Про авторське право і суміжні права», Закону України «Про охорону прав на знаки для товарів і послуг», міжнародними конвенціями та іншими законами про інтелектуальну власність.\r\n3.2. Повна або часткова републікація Матеріалів Сайту на інших ресурсах може бути здійснена за наявності прямого гіперпосилання (відкритого для пошукових систем) у першому абзаці публікації. Повна або часткова републікація матеріалів, у яких окремо зазначено про заборону їх копіювання, не допускається.\r\n3.3. Якщо Ви зацікавлені в перевиданні, тиражуванні або іншому поширенні Матеріалів Сайту, будь ласка, зв’яжіться з нами за адресою office@gmail.com\r\n4. Відправлення повідомлень користувачам\r\n4.1. Сайт може відправляти Користувачеві різноманітні повідомлення електронною поштою, яка вказана Користувачем при реєстрації профілю. Повідомлення, які відправляються користувачеві, можуть включати такий зміст: інформація про новий контент, інформація про різні промо-акції і знижки, інформація рекламного характеру третіх осіб, технічна інформація про використання Сайту, інформація про нові сервіси.\r\n4.2. Створюючи профіль на Сайті, Користувач автоматично погоджується з тим, що йому можуть бути надіслані листи за адресою його електронної пошти, вказаною при створенні профіля, тематика яких зазначена в п.п. 4.1. цієї угоди.\r\n4.3. Відмовитися від отримання електронних листів зазначених у п.п. 4.1, Користувач може шляхом редагування свого профілю на сайті за адресою: https://google.com.ua/users/?do=profile або натиснувши на відповідне посилання в будь-якому з отриманих електронних листів.\r\n5. Зворотний зв’язок\r\n5.1. Усі пропозиції або запитання з приводу цієї угоди Користувач повинен скеровувати в службу підтримки користувачів Сайту на електронну адресу office@gmail.com\r\nОстання редакція: 20.06.2024 року."
           }
         }
       }

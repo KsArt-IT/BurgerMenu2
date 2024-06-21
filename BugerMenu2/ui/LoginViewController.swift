@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
 
     private func initView() {
         titleLabel.text = AppStrings.loginTitle
-        titleLabel.text = AppStrings.rememberHint
         emailHintLabel.text = AppStrings.emailHint
         passHintLabel.text = AppStrings.passHint
         rememberLabel.text = AppStrings.rememberHint
@@ -56,12 +55,18 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginClick(_ sender: Any) {
         // проверить данные и войти
+        checkLoginData()
+        if Validate.shared.isLogin() {
+            dismiss(animated: true)
+        } else {
+            showAlert("Error!", message: AppStrings.loginError)
+        }
     }
 
-    @IBAction func signUpClick(_ sender: Any) {
-        // перейти на экран регистрации
+    private func checkLoginData() {
+        Validate.shared.setEmail(emailText.text)
+        Validate.shared.setPassword(passText.text)
     }
-    
 }
 
 extension LoginViewController: UITextFieldDelegate {

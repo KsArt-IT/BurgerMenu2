@@ -22,6 +22,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var surnameText: UITextField!
     
+    @IBOutlet weak var userAgreementButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
@@ -58,9 +59,36 @@ class SignUpViewController: UIViewController {
         surnameText.attributedPlaceholder = AppStrings.surnamePlaceholder
         surnameText.delegate = self
 
+        userAgreementButton.setTitle(AppStrings.agreementTitle, for: .normal)
+        
         signUpButton.setTitle(AppStrings.signUP, for: .normal)
         signUpButton.applyGradient()
         signUpButton.isEnabled = false
+    }
+
+    @IBAction func showUserAgreement(_ sender: Any) {
+        performSegue(withIdentifier: "toUserAgreementScreenSID", sender: nil)
+    }
+
+    @IBAction func signUpClick(_ sender: Any) {
+        checkDataSignUp()
+        if Validate.shared.isValidSignup() {
+            if !Validate.shared.isUserAgreement() {
+                showUserAgreement(self)
+            } else {
+                dismiss(animated: true)
+            }
+        } else {
+            showAlert("Error!", message: AppStrings.signUPError)
+        }
+    }
+
+    private func checkDataSignUp() {
+        Validate.shared.setEmailReg(emailText.text)
+        Validate.shared.setPasswordReg(passwordText.text)
+        Validate.shared.setConfirmPasswordReg(confirmPassText.text)
+        Validate.shared.setNameReg(confirmPassText.text)
+        Validate.shared.setSurnameReg(confirmPassText.text)
     }
 
 }
@@ -80,6 +108,11 @@ extension SignUpViewController: UITextFieldDelegate {
             default:
                 break
         }
+        return true
+    }
+
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        signUpButton.isEnabled = Validate.shared.isValidSignup()
         return true
     }
 

@@ -19,6 +19,7 @@
 		F107F87C2C21B78300176F82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107F87B2C21B78300176F82 /* Constants.swift */; };
 		F107F87E2C21CA9300176F82 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107F87D2C21CA9300176F82 /* AppStrings.swift */; };
 		F1A8D4402C243E2D00D8A7E8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A8D43F2C243E2D00D8A7E8 /* SignUpViewController.swift */; };
+		F1B6F7132C24A6BC00D8B795 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6F7122C24A6BC00D8B795 /* AgreementViewController.swift */; };
 		F1FD352A2C232387006F3EDD /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD35292C232387006F3EDD /* Validate.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		F107F87B2C21B78300176F82 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F107F87D2C21CA9300176F82 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		F1A8D43F2C243E2D00D8A7E8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F1B6F7122C24A6BC00D8B795 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		F1FD35292C232387006F3EDD /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				F107F8602C2190D200176F82 /* ViewController.swift */,
 				F107F8732C219B1600176F82 /* LoginViewController.swift */,
 				F1A8D43F2C243E2D00D8A7E8 /* SignUpViewController.swift */,
+				F1B6F7122C24A6BC00D8B795 /* AgreementViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				F107F85D2C2190D200176F82 /* AppDelegate.swift in Sources */,
 				F107F87E2C21CA9300176F82 /* AppStrings.swift in Sources */,
 				F1A8D4402C243E2D00D8A7E8 /* SignUpViewController.swift in Sources */,
+				F1B6F7132C24A6BC00D8B795 /* AgreementViewController.swift in Sources */,
 				F107F85F2C2190D200176F82 /* SceneDelegate.swift in Sources */,
 				F107F87C2C21B78300176F82 /* Constants.swift in Sources */,
 			);

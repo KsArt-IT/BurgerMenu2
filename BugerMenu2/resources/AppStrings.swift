@@ -10,7 +10,6 @@ import UIKit
 enum AppStrings {
     static let loginTitle = String(localized: "Login")
 
-
     static let rememberHint = String(localized: "Remember me")
 
     static let emailHint = String(localized: "Email")
@@ -38,6 +37,11 @@ enum AppStrings {
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.mainBlue.withAlphaComponent(0.3)]
     )
 
+    static let agreementTitle = String(localized: "User Agreement")
+    static let agreementText = String(localized: "User Agreement Text")
+
+    static let loginError = String(localized: "Login Error")
     static let loginButton = String(localized: "Login")
     static let signUP = String(localized: "Sign UP")
+    static let signUPError = String(localized: "Sign UP Error")
 }
