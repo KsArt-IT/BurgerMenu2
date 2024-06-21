@@ -84,10 +84,45 @@
     "Login Error" : {
       "extractionState" : "manual",
       "localizations" : {
-        "ru" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "Not all fields are filled in or the user is not registered!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "Не все поля заполнены или пользователь не зарегистрирован!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Не всі поля заповнені або не зареєстровано!"
+          }
+        }
+      }
+    },
+    "Login Error User" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This user does not exist, please register!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Такого пользователя не существует, пожалуйста зарегистрируйтесь!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Такого користувача не існує, будь ласка, зареєструйтесь!"
           }
         }
       }
@@ -231,6 +266,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не всі поля введені або не відповідають умовам введення email чи складності пароля!"
+          }
+        }
+      }
+    },
+    "Sign UP Error User" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This user already exists!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Такой пользователь уже существует!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Такий користувач існує!"
           }
         }
       }

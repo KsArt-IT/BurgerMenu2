@@ -41,7 +41,11 @@ enum AppStrings {
     static let agreementText = String(localized: "User Agreement Text")
 
     static let loginError = String(localized: "Login Error")
+    static let loginErrorUser = String(localized: "Login Error User")
+
     static let loginButton = String(localized: "Login")
     static let signUP = String(localized: "Sign UP")
+
     static let signUPError = String(localized: "Sign UP Error")
+    static let signUPErrorUser = String(localized: "Sign UP Error User")
 }

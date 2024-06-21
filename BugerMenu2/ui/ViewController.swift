@@ -21,10 +21,20 @@ class ViewController: UIViewController {
 
     private func isLogin() {
         if !Validate.shared.isLogin() {
-            performSegue(withIdentifier: "toLoginScreenSID", sender: nil)
+            toLoginScreen()
         } else {
-            print("online")
+            titleLabel.text = "Hi \(Validate.shared.getName())"
         }
+    }
+
+    @IBAction func logoutClick(_ sender: Any) {
+        Validate.shared.logout()
+        titleLabel.text = ""
+        toLoginScreen()
+    }
+
+    private func toLoginScreen() {
+        performSegue(withIdentifier: "toLoginScreenSID", sender: nil)
     }
 }
 

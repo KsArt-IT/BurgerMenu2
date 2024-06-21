@@ -54,10 +54,13 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginClick(_ sender: Any) {
-        // проверить данные и войти
         checkLoginData()
-        if Validate.shared.isLogin() {
-            dismiss(animated: true)
+        if Validate.shared.isValid() {
+            if Validate.shared.login(rememberSwitch.isOn) {
+                dismiss(animated: true)
+            } else {
+                showAlert("Error!", message: AppStrings.loginErrorUser)
+            }
         } else {
             showAlert("Error!", message: AppStrings.loginError)
         }

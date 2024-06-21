@@ -76,7 +76,11 @@ class SignUpViewController: UIViewController {
             if !Validate.shared.isUserAgreement() {
                 showUserAgreement(self)
             } else {
-                dismiss(animated: true)
+                if Validate.shared.singup() {
+                    dismiss(animated: true)
+                } else {
+                    showAlert("Error!", message: AppStrings.signUPErrorUser)
+                }
             }
         } else {
             showAlert("Error!", message: AppStrings.signUPError)
