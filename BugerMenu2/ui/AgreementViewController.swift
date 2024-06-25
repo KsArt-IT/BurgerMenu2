@@ -9,7 +9,6 @@ import UIKit
 
 class AgreementViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var agreementText: UITextView!
     @IBOutlet weak var okButton: UIButton!
 
@@ -19,9 +18,8 @@ class AgreementViewController: UIViewController {
     }
  
     private func initView() {
-        titleLabel.text = AppStrings.agreementTitle
+        title = AppStrings.agreementTitle
         agreementText.text = AppStrings.agreementText
-        agreementText.delegate = self
         okButton.applyGradient()
     }
 
@@ -31,8 +29,4 @@ class AgreementViewController: UIViewController {
         dismiss(animated: true)
     }
 
-}
-
-extension AgreementViewController: UITextViewDelegate {
-    
 }

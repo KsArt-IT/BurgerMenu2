@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,16 +20,16 @@ class ViewController: UIViewController {
 
     private func isLogin() {
         if !Validate.shared.isLogin() {
+            title = ""
             toLoginScreen()
         } else {
-            titleLabel.text = "Hi \(Validate.shared.getName())"
+            title = "Hi \(Validate.shared.getName())"
         }
     }
 
     @IBAction func logoutClick(_ sender: Any) {
         Validate.shared.logout()
-        titleLabel.text = ""
-        toLoginScreen()
+        isLogin()
     }
 
     private func toLoginScreen() {

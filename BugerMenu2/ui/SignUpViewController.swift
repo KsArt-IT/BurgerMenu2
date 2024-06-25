@@ -9,7 +9,6 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailHintLabel: UILabel!
     @IBOutlet weak var passHintLabel: UILabel!
     @IBOutlet weak var confirmPassHintLabel: UILabel!
@@ -31,8 +30,7 @@ class SignUpViewController: UIViewController {
     }
 
     private func initView() {
-        titleLabel.text = AppStrings.loginTitle
-        titleLabel.text = AppStrings.rememberHint
+        title = AppStrings.signUP
         emailHintLabel.text = AppStrings.emailHint
         passHintLabel.text = AppStrings.passHint
         confirmPassHintLabel.text = AppStrings.confirmPassHint
