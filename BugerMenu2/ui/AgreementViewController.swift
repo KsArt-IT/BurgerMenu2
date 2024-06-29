@@ -26,7 +26,7 @@ class AgreementViewController: UIViewController {
     @IBAction func okClick(_ sender: Any) {
         Validate.shared.setUserAgreement()
 
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
 }

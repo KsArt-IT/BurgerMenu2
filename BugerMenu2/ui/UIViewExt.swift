@@ -34,6 +34,7 @@ extension UIView {
         self.layer.cornerRadius = Constants.cornerRadius
         self.layer.borderWidth = Constants.borderWidth
         self.layer.borderColor = UIColor.darkBlue.withAlphaComponent(0.3).cgColor
+        self.layer.masksToBounds = true
     }
 
     func animateCorner(){

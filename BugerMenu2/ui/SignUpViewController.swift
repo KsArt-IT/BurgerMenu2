@@ -69,13 +69,13 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func signUpClick(_ sender: Any) {
-        checkDataSignUp()
+        updateDataSignUp()
         if Validate.shared.isValidSignup() {
             if !Validate.shared.isUserAgreement() {
                 showUserAgreement(self)
             } else {
-                if Validate.shared.singup() {
-                    dismiss(animated: true)
+                if Validate.shared.signup() {
+                    navigationController?.popViewController(animated: true)
                 } else {
                     showAlert("Error!", message: AppStrings.signUPErrorUser)
                 }
@@ -85,12 +85,12 @@ class SignUpViewController: UIViewController {
         }
     }
 
-    private func checkDataSignUp() {
+    private func updateDataSignUp() {
         Validate.shared.setEmailReg(emailText.text)
         Validate.shared.setPasswordReg(passwordText.text)
         Validate.shared.setConfirmPasswordReg(confirmPassText.text)
-        Validate.shared.setNameReg(confirmPassText.text)
-        Validate.shared.setSurnameReg(confirmPassText.text)
+        Validate.shared.setNameReg(nameText.text)
+        Validate.shared.setSurnameReg(surnameText.text)
     }
 
 }
@@ -100,17 +100,38 @@ extension SignUpViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard !string.isEmpty else { return true }
 
+        // Получение текущего текста
+        let currentText = textField.text ?? ""
+
+        // Получение нового текста после замены
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+
+        // Определение валидности символа и обновленного текста в зависимости от поля ввода
+        var isValidChar: Bool = true
+        var isValidData: Bool?
+
         switch textField {
             case emailText:
-                return Validate.shared.valideCharForEmail(string)
-            case passwordText, confirmPassText:
-                return Validate.shared.valideCharForPassword(string)
-            case nameText, surnameText:
-                return Validate.shared.valideCharForName(string)
+                isValidChar = Validate.shared.valideCharForEmail(string)
+                isValidData = Validate.shared.isValidSignup(email: updatedText)
+            case passwordText:
+                isValidChar =  Validate.shared.valideCharForPassword(string)
+                isValidData = Validate.shared.isValidSignup(password: updatedText)
+            case confirmPassText:
+                isValidChar =  Validate.shared.valideCharForPassword(string)
+                isValidData = Validate.shared.isValidSignup(passwordConfirm: updatedText)
+            case nameText:
+                isValidChar =  Validate.shared.valideCharForName(string)
+                isValidData = Validate.shared.isValidSignup(name: updatedText)
+            case surnameText:
+                isValidChar =  Validate.shared.valideCharForName(string)
+                isValidData = Validate.shared.isValidSignup(surname: updatedText)
             default:
                 break
         }
-        return true
+        signUpButton.isEnabled = isValidData ?? Validate.shared.isValidSignup()
+        return isValidChar
     }
 
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -146,9 +167,9 @@ extension SignUpViewController: UITextFieldDelegate {
             case confirmPassText:
                 Validate.shared.setConfirmPasswordReg(confirmPassText.text)
             case nameText:
-                Validate.shared.setNameReg(confirmPassText.text)
+                Validate.shared.setNameReg(nameText.text)
             case surnameText:
-                Validate.shared.setSurnameReg(confirmPassText.text)
+                Validate.shared.setSurnameReg(surnameText.text)
             default:
                 break
         }

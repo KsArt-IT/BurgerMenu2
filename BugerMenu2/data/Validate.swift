@@ -37,7 +37,7 @@ class Validate {
     }
 
     public func getName() -> String {
-        userOnline.email
+        userOnline.name
     }
 
     // MARK: - Validate
@@ -50,7 +50,12 @@ class Validate {
     }
 
     public func valideCharForName(_ password: String) -> Bool {
-        Character(password).isLetter
+        for char in password {
+            if !char.isLetter {
+                return false
+            }
+        }
+        return true
     }
 
     private func valideEmail(_ email: String) -> Bool {
@@ -79,13 +84,19 @@ class Validate {
         return !self.email.isEmpty && login()
     }
 
-    public func isValid() -> Bool {
-        valideEmail(email) && validePassword(password)
+    public func isValid(email: String? = nil, password: String? = nil) -> Bool {
+        valideEmail(email ?? self.email) && validePassword(password ?? self.password)
     }
 
-    public func isValidSignup() -> Bool {
-        valideEmail(userReg.email) && validePassword(userReg.password) &&
-        userReg.password == userReg.passwordConfirm && !userReg.name.isEmpty && !userReg.surname.isEmpty
+    public func isValidSignup(
+        email: String? = nil,
+        password: String? = nil, passwordConfirm: String? = nil,
+        name: String? = nil, surname: String? = nil
+    ) -> Bool {
+        valideEmail(email ?? userReg.email) &&
+        validePassword(password ?? userReg.password) &&
+        (password ?? userReg.password) == (passwordConfirm ?? userReg.passwordConfirm) &&
+        !(name ?? userReg.name).isEmpty && !(surname ?? userReg.surname).isEmpty
     }
 
     // MARK: - Update User
@@ -166,20 +177,24 @@ class Validate {
     }
 
     // MARK: - Sing Up
-    public func singup() -> Bool {
+    public func signup() -> Bool {
         guard isValidSignup() else { return false }
 
         // проверить такого пользователя
-        if let data = getUser(of: userReg.email) {
-        } else {
+        if getUser(of: userReg.email) == nil {
             // обновить дату регистрации
             updateUserReg(date: Date())
             // сохранить
-            if let data = try? PropertyListEncoder().encode(userReg) {
-                UserDefaults.standard.setValue(data, forKey: userReg.email)
+            if let data = try? PropertyListEncoder().encode(userReg), saveUser(of: userReg.email, data: data) {
                 userReg = Validate.getEmptyUser()
+                email = ""
+                password = ""
                 return true
+            } else {
+                print("Failed to encode user data")
             }
+        } else {
+            print("User already exists")
         }
         return false
     }
@@ -188,16 +203,25 @@ class Validate {
     public func login(_ remember: Bool = false) -> Bool {
         guard !self.email.isEmpty else { return false }
 
+        // проверить такого пользователя
         if let data = getUser(of: self.email) {
-            if let user = try? PropertyListDecoder().decode(User.self, from: data) {
+            do {
+                let user = try PropertyListDecoder().decode(User.self, from: data)
+                print("Decoded user: \(user)")
                 if user.email == self.email && user.password == self.password {
                     if remember {
                         rememberEndDate()
                     }
                     userOnline = user
                     return true
+                } else {
+                    print("Email or password do not match")
                 }
+            } catch {
+                print("Error decoding user: \(error)")
             }
+        } else {
+            print("No data found for email: \(self.email)")
         }
         return false
     }
@@ -208,10 +232,24 @@ class Validate {
         self.password = ""
     }
 
+    private func saveUser(of email: String, data: Data) -> Bool {
+        guard !email.isEmpty else { return false }
+
+        let key = email.trimmingCharacters(in: .whitespaces).lowercased()
+        print("Save key user: \(key)")
+        // сохраним
+        UserDefaults.standard.setValue(data, forKey: key)
+        UserDefaults.standard.synchronize()
+        // прочитаем
+        return (UserDefaults.standard.object(forKey: key) as? Data) != nil
+    }
+
     private func getUser(of email: String) -> Data? {
         guard !email.isEmpty else { return nil }
 
-        return UserDefaults.standard.object(forKey: email.trimmingCharacters(in: .whitespaces).lowercased()) as? Data
+        let key = email.trimmingCharacters(in: .whitespaces).lowercased()
+        print("Read key user: \(key)")
+        return UserDefaults.standard.object(forKey: key) as? Data
     }
 
     private func rememberEndDate(logout: Bool = false) {

@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
         emailText.applyBorderStyle()
         emailText.attributedPlaceholder = AppStrings.emailPlaceholder
         emailText.delegate = self
+
         passText.applyBorderStyle()
         passText.attributedPlaceholder = AppStrings.passPlaceholder
         passText.delegate = self
@@ -54,10 +55,10 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginClick(_ sender: Any) {
-        checkLoginData()
+        updateLoginData()
         if Validate.shared.isValid() {
             if Validate.shared.login(rememberSwitch.isOn) {
-                dismiss(animated: true)
+                navigationController?.popViewController(animated: true)
             } else {
                 showAlert("Error!", message: AppStrings.loginErrorUser)
             }
@@ -66,7 +67,7 @@ class LoginViewController: UIViewController {
         }
     }
 
-    private func checkLoginData() {
+    private func updateLoginData() {
         Validate.shared.setEmail(emailText.text)
         Validate.shared.setPassword(passText.text)
     }
@@ -76,16 +77,32 @@ extension LoginViewController: UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard !string.isEmpty else { return true }
+        
+        // Получение текущего текста
+        let currentText = textField.text ?? ""
+
+        // Получение нового текста после замены
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        // Определение валидности символа и обновленного текста в зависимости от поля ввода
+        var isValidChar: Bool = true
+        var isValidData: Bool?
 
         switch textField {
             case emailText:
-                return Validate.shared.valideCharForEmail(string)
+                isValidChar = Validate.shared.valideCharForEmail(string)
+                isValidData = Validate.shared.isValid(email: updatedText)
             case passText:
-                return Validate.shared.valideCharForPassword(string)
+                isValidChar = Validate.shared.valideCharForPassword(string)
+                isValidData = Validate.shared.isValid(password: updatedText)
             default:
                 break
         }
-        return true
+        if isValidChar {
+            loginButton.isEnabled = isValidData ?? Validate.shared.isValid()
+        }
+        return isValidChar
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -97,6 +114,7 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
 
+    // окончание редактирования
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
             case emailText:
